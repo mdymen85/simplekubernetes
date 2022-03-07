@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubernetes-test
+  labels:
+    app: podx
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: podx
+    spec:
+      containers:
+        - name: kubernetes-test
+          image: mdymen85/kubernetes-test:1.0
+  selector:
+    matchLabels:
+      app: podx
+          
