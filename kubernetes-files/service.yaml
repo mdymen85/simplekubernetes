@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: svc-pod1
   labels:
-    name: podx
+    name: svc-pod1
 spec:
+  type: NodePort
   selector:
     name: podx
   ports:
     - port: 8080
-  type: NodePort
+      targetPort: 8080  
