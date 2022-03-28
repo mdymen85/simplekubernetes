@@ -24,5 +24,7 @@ kubectl rollout history deployment applicacao-deployment
 minikube service --url <service-name>
 
 kubectl expose deployment <deployment> --type=NodePort --name=<service_name> --port=<port>
+  
+kubectl get all
 
   
